@@ -1,31 +1,74 @@
-* {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Playfair+Display&display=swap');
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--clr-white);
+  background-color: var(--clr-dark);
+  line-height: 1.5;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+}
+
 :root {
-  --accent-color: rgb(255, 255, 255);
-  --main-color: rgb(199, 53, 53);
+  --clr-dark: #14213d;
+  --clr-accent: #fca311;
+  --clr-white: #e5e5e5;
+  --ff-body: 'Cabin', sans-serif;
 }
-.container{
-  display: flex;
-  height: 100vh;
+.container {
+  max-width: 65%;
+  padding-inline:5px;
+  margin:auto;
 }
-#left-section{
+#left-section {
   width: 40vw;
-  background-color: var(--main-color);
 }
 #right-section {
-    background-image: url("Library.jpeg");
-    height: 100vh;
-    width: 60vw;
+  background-image: url("https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498_960_720.jpg");
+  height: 100vh;
+  width: 60vw;
+}
+.flex{
+  display: flex;
+
+}
+.flex-col{
+  flex-direction:column;
 }
 
-
-
-
-
-
-
-
+.uppercase{
+  text-transform: uppercase;
+}
